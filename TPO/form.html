@@ -49,6 +49,23 @@
       }
       .row.content {height:auto;} 
     }
+	body {
+    background-color: #eee;
+}
+
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+
   </style>
   </head>
 <body>
@@ -110,15 +127,53 @@
 	  </div>
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>Welcome</h1>
-      <p>The Training and Placement cell is headed by Dr. G.S.Mundada (TPO)
-	  who is keen in encouraging students to prefer jobs that better suit their profile.
-	  The placement season commences in the first month of every academic year and continues
-	  till the end of the academic year.
-	  Pre-Placement Talks are conducted for the final year students prior to the placement session every year.</p>
-      <hr>
-      <h3>Another INFO</h3>
-      <p>5 Students are selected for google..</p>
+      <form class="form-horizontal" role="form">
+                <h2>Company Registration</h2>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">Company</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="firstName" placeholder="Company Name" class="form-control" autofocus>
+                        <span class="help-block">eg.: Google, Nvidia</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text" class="col-sm-3 control-label">Salary</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="salary" placeholder="Salary" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text" class="col-sm-3 control-label">Criteria</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="criteria" placeholder="Criteria" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">PPT Date</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="birthDate" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text" class="col-sm-3 control-label">Back</label>
+                    <div class="col-sm-9">
+                        <select id="country" class="form-control">
+                            <option>No Back</option>
+                            <option>1 Back</option>
+                            <option>2 Back</option>
+                            <option>3 Back</option>
+                            <option>4 Backr</option>
+                            <option>5 BAck</option>
+                        </select>
+                    </div>
+                </div> <!-- /.form-group -->
+>
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </div>
+                </div>
+            </form> <!-- /form -->
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">

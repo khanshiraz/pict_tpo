@@ -1,0 +1,226 @@
+<html>
+<head>
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Update Company</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!---- BootStrap Libraries         -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar 
+	{
+	  position:relative; 
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px;position fixed}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+	  background-color: #555;
+      color: white;
+      padding: 15px;
+	  position:relative;
+	  height:50px;
+      bottom:0px;
+      left:0px;
+      right:0px;
+      margin-bottom:0px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+	textarea.form-control
+	{
+		height: 30%;
+	}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<h1 class="text-center"> 
+<a class="pull-left" href="http://139.59.34.20:8090/"> 
+<img class="img-responsive" style="vertical-align: bottom;" src="pict_logo.png" alt="pict logo"/>
+</a><span style="margin-left: -20%; color: rgb(222, 222, 222);">Training and Placement</span></h1>  
+
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://139.59.34.20:8090/">Home</a></li>
+        <!--  dropdown menu
+		<li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Companies</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">Notifications</a></li>
+          </ul>
+        </li>
+		-->
+        <li><a href="#">Upload</a></li>
+        <li><a href="./RegistrationForm.html">Update</a></li>
+		<li><a href="./notify.html">Notify</a></li>
+		<li><a href="#">Statistics</a></li>
+		<li><a href="#">Notifications</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<form class="form-horizontal" autocomplete="off" method="post" enctype="multipart/form-data">
+<fieldset>
+
+<!-- Form Name -->
+
+
+<!-- Button Drop Down -->
+<div class="form-group">
+<h2 align="center">Update Company</h2>
+  <label class="col-md-4 control-label" for="buttondropdown">Company</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      
+      <div class="input-group-btn">
+        <select class="form-control" name="companyNames" id="company">
+		<option selected disabled hidden>Select Company</option>
+        <option value="MorganStanley">Morgan Stanley</option>
+        <option value="Amura">Amura</option>
+        <option value="Rakuten">Rakuten</option>
+        <option value="NVDIA">NVDIA</option>
+      </select>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="registrationLink">Registration Link</label>  
+  <div class="col-md-4">
+  <input id="registrationLink" name="registrationLink" type="url" placeholder="Registration Link" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="registrationStartDate">Registration Start Date</label>  
+  <div class="col-md-4">
+  <input id="registrationStartDate" name="registrationDate" type="date" placeholder="MM/DD/YYYY" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="registrationEndDate">Registration End Date</label>  
+  <div class="col-md-4">
+  <input id="registrationEndDate" name="registrationDate" type="date" placeholder="MM/DD/YYYY" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="registrationStartTime">Registration Time</label>  
+  <div class="col-md-2">
+  <input id="registrationStartTime" name="registrationStartTime" type="time" placeholder="Registration Start Time" class="form-control input-md" required="">
+  </div> 
+  <!--
+  <label for="registrationEndTime" class="control-label" style="float:left">to</label>
+  -->
+  <div class="col-md-2">
+  <input id="registrationEndTime" name="registrationEndTime" type="time" placeholder="Registration End time" class="form-control input-md" required="">
+    </div>
+  </div>
+  
+
+
+<!-- Text input
+<div class="form-group">
+  <label class="col-md-4 control-label" for="registrationEndTime">Registration End Time</label>  
+  <div class="col-md-4">
+  <input id="registrationEndTime" name="registrationEndTime" type="time" placeholder="Registration End time" class="form-control input-md" required="">
+    
+  
+</div>
+-->
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="otherDetails">Other Details</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="otherDetails" name="otherDetails" maxlength="550"></textarea>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="update"></label>
+  <div class="col-md-4" align="center">
+    <button id="update" name="update" class="btn btn-info">Update</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script type="text/javascript">
+$('.clockpicker').clockpicker();
+</script>
+
+<script>
+	$(document).ready(function(){
+		var date_input=$('input[name="registrationDate"]' ); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'mm/dd/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		})
+	})
+</script>
+<footer class="container-fluid text-center">
+ <p>Copyrights <span  class="glyphicon glyphicon-copyright-mark"</span> 2016-17 by PICT, Pune. All rights reserved | Made with <span class="glyphicon glyphicon-heart" style="color:red;"></span> in PICT.</p> 
+</footer>
+</body>
+</html>
